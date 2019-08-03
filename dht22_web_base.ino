@@ -143,6 +143,7 @@ String insert_message(float temp1, float temp2, float hum1, float hum2) {
 
 void log_service() {
   http.begin(logtofileUrl, fingerprint_aws);
+  // fingerprint_aws obtenu avec https://www.grc.com/fingerprints.htm
   //http.begin("https://httpbin.org/ip", fingerprint_bin);
   http.addHeader("x-api-key", cleapi);
   http.addHeader("Content-Type", "application/json");
